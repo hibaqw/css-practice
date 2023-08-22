@@ -1,0 +1,54 @@
+
+
+
+#box-one {
+  /* sets background image */
+  background-image: url(./docs/bojack-horseman.jpeg);
+  /* sets background image not to repeat. default is to repeat */
+  background-repeat: no-repeat;
+  /* restricts background to only content-box. default is to have image cover padding as well */
+  background-clip: content-box;
+  /* sets border as 2px wide, solid and red */
+  border: 2px solid red;
+  /* padding top, right, left, and bottom set to 35px */
+  padding: 35px;
+  /* sets padding color to lightgreen. Notice how the last value and padding size are the same */
+  box-shadow: inset 0 0 0 35px lightGreen;
+  width: 400px;
+  height: 400px;
+  /* sets text in the center of box on horizontal axis */
+  text-align: center;
+  /* margin top, bottom, right, and left are set to 35px */
+  margin: 35px;
+}
+
+#box-two {
+  background-image: url(./docs/bojack-horseman.jpeg);
+  background-repeat: no-repeat;
+  border: 2px solid red;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  margin: 40px;
+}
+
+
+#box-three {
+  color: #ce40b4;
+  /* font-family: arial, with helvetica and sans-serif as fall back fonts */
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: cyan;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 5px;
+}
+
+#box-four {
+  color: #7e40ce;
+  font-family: Arial, Helvetica, sans-serif;
+  /* rbg = red, green, blue */
+  background-color: rgb(229, 188, 24);
+  border: 2px solid black;
+  margin: 10px;
+  padding: 5px;
+}

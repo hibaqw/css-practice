@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 1 </title>
+      <!-- link to font-awesome plugin -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+        /* applying #88F9F as background-color */
+        body,
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+          background-color: #88F9FF;
+        }
+
+        h1,
+        h2 {
+          font-family: monospace;
+          color: palevioletred;
+        }
+
+        p {
+          font-family: Arial, Helvetica, sans-serif;
+          color: deeppink;
+          font-size: 25px;
+        }
+
+        table {
+          background-color: #e788df;
+        }
+
+        th {
+          font-family: cursive;
+          font-weight: 300;
+          color: blue;
+        }
+
+        td {
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* because we are styling these three attribute selectors in the same, 
+    way consider using a single class name for the text, email, and password input fields */
+        input[type=text]:focus,
+        input[type=email]:focus,
+        input[type=password]:focus {
+
+          border: 3px solid #d60da0;
+          /* 3px width, solid border with  */
+        }
+
+        /* again consider creating a class name and using them in input tags with type text, email, and password*/
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+          /* setting border to none -> erases border */
+          border: none;
+          border-bottom: 2px solid black;
+          /* except border bottom: this declaration sets a 2px wide, solid, black bottom border */
+        }
+
+        textarea {
+          opacity: 0.3;
+          border: none;
+          /* opacity: ranges from 1 (no transparency) to 0 (fully transparent) 
+      border: none -> no border visible
+      */
+
+        }
+
+        input[type="submit"] {
+          color: #fff;
+          background-color: #e788df;
+          border: 2px #fff solid;
+          border-radius: 10px;
+          padding: 5px 70px;
+          text-align: center;
+          /* font color -> white
+      background color -> #e788df 
+      border-radius -> property affects roundness of border's edges
+      padding -> 5px (padding top & bottom) 70px (padding right and left)
+      text-align -> alignment of text on the horizontal axis
+      */
+        }
+      </style>
+</head>
+
+<body>
+  <h1>HTML - DAY 3</h1>
+  <p>Today I reviewed what <i style="color: orange;">HTML</i>, why it is used, what the basic structure of
+    an HTML document looks like.</p>
+  <img src="./docs/bojack-horseman.jpeg" alt="Margot Robbie as Barbie" width="450px" height="350px">
+  <p>Margot Robbie getting ready as Barbie in Barbie(2023)</p>
+  <!-- table -> container to hold table elements -->
+  <table>
+    <!-- use thead to wrap around table headings -->
+    <thead>
+      <!-- <tr> -> table row tag -->
+      <tr>
+        <!-- <th> -> stores heading/column name of table -->
+        <th>Topics Covered</th>
+        <th>Proficiency</th>
+      </tr>
+    </thead>
+    <!-- use <tbody> to wrap around a tables data cells -->
+    <tbody>
+      <tr>
+        <!-- <th> -> table data === a table cell -->
+        <td>
+          HTML Basics
+        </td>
+        <td>
+          5
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Semantic and Non-Semantic HTML
+        </td>
+        <td>
+          3.5
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Block vs. Inline HTML
+        </td>
+        <td>
+          4
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Images and Anchor Tags
+        </td>
+        <td>
+          5
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Forms
+        </td>
+        <td>
+          4
+        </td>
+      <tr>
+        <td>
+          HTML Best Practices
+        </td>
+        <td>
+          3.5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- FORM:
+    (HEADER)
+  1. FIRST NAME 
+  2. LAST NAME
+  3. EMAIL FIELD
+  4. PASSWORD FIELD
+  5. GENDER OPTION (RADIO)
+  6. FUN FACT FIELD (TEXTAREA)-->
+  <h2>WIT 6 SIGN UP FORM</h2>
+  <!-- form tag: container for content inside form -->
+  <form>
+    <!-- removed label tags and used placeholders instead for purely stylistic reasons.
+    placeholder displays placeholder value inside input field.
+    REMEMBER TO USE NAME ATTRIBUTE INSIDE INPUT FIELD TO SEND BACK USER DATA TO SERVER! -->
+    <input id="fname" type="text" placeholder="First Name" name="sign-up"> <br>
+    <input id="lname" type="text" placeholder="Last Name" name="sign-up"> <br>
+    <input id="user-email" type="email" placeholder="Email" name="sign-up"> <br>
+    <input id="user-password" type="password" placeholder="*******" name="sign-up"> <br> <br>
+    <p>Gender</p>
+    <label for="male">Male</label>
+    <input id="male" type="radio" name="sign-up">
+    <label for="female">Female</label>
+    <input id="female" type="radio" name="sign-up">
+    <label for="nonbinary">Nonbinary</label>
+    <input id="nonbinary" type="radio" name="sign-up"> <br><br>
+    <label for="fun-fact">Fun Fact:</label> <br>
+    <textarea id="fun-fact" name="sign-up"></textarea><br>
+    <input type="submit" value="submit">
+  </form>
+  <br>
+  <!-- ICONS TO LINKEDIN AND GITHUB -->
+  <a href="https://github.com/hibaqw">
+    <i class="fa-brands fa-github fa-2xl" style="color: #e788df;"></i>
+    <a href="https://www.linkedin.com/in/hibaq-warsame/"><i class="fa-brands fa-linkedin fa-2xl"
+        style="color: #e788df;"></i></a>
+</body>
+</html>
